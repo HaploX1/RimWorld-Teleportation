@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+	<Teleporter_PortalState>Portal-State:</Teleporter_PortalState>
+	<Teleporter_PortalState_Send>Sending</Teleporter_PortalState_Send>
+	<Teleporter_PortalState_Receive>Receiving</Teleporter_PortalState_Receive>
+	<Teleporter_PortalState_Off>- - -</Teleporter_PortalState_Off>
+	
+	<Teleporter_Countdown>Teleporting in</Teleporter_Countdown>
+	<Teleporter_NoTeleporterConnected>No teleporter connected...</Teleporter_NoTeleporterConnected>
+	<Teleporter_ButtonSwitchToSending>Switch state to sending.</Teleporter_ButtonSwitchToSending>
+	<Teleporter_ButtonSwitchToReceiving>Switch state to receiving.</Teleporter_ButtonSwitchToReceiving>
+
+	<Teleportation_PlaceWorker_MaxCountOfTeleportersReached>Too many teleporters.</Teleportation_PlaceWorker_MaxCountOfTeleportersReached>
+	
+</LanguageData>

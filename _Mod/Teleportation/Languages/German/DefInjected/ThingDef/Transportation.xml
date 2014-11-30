@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+	<TeleportationStation.label>Teleporter</TeleportationStation.label>
+	<TeleportationStation.description>Dieses Gebäude transportiert Materie zum Empfänger.\nHinweis: Nicht zum Transport von Lebewesen geeignet.</TeleportationStation.description>
+	
+</LanguageData>

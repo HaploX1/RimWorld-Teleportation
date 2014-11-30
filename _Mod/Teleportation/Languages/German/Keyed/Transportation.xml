@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+	<Teleporter_PortalState>Portal Status:</Teleporter_PortalState>
+	<Teleporter_PortalState_Send>Senden</Teleporter_PortalState_Send>
+	<Teleporter_PortalState_Receive>Empfangen</Teleporter_PortalState_Receive>
+	<Teleporter_PortalState_Off>- - -</Teleporter_PortalState_Off>
+	
+	<Teleporter_Countdown>Teleportation in</Teleporter_Countdown>
+	<Teleporter_NoTeleporterConnected>Mit keinem Gegenstück verbunden...</Teleporter_NoTeleporterConnected>
+	<Teleporter_ButtonSwitchToSending>Ändere Betriebsart zu 'senden'.</Teleporter_ButtonSwitchToSending>
+	<Teleporter_ButtonSwitchToReceiving>Ändere Betriebsart zu 'empfangen'.</Teleporter_ButtonSwitchToReceiving>
+
+	<Teleportation_PlaceWorker_MaxCountOfTeleportersReached>Maximale Teleporteranzahl erreicht.</Teleportation_PlaceWorker_MaxCountOfTeleportersReached>
+
+	
+</LanguageData>

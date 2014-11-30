@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  
+	<TeleportationStation.label>Teleporter</TeleportationStation.label>
+	<TeleportationStation.description>This building transports matter to it's counterpart.\nNote: It transports non-living matter only.</TeleportationStation.description>
+	
+</LanguageData>
