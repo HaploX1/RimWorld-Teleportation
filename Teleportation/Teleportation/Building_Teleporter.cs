@@ -130,8 +130,8 @@ namespace Teleportation
             powerComp = GetComp<CompPowerTrader>();
 
             // Prepare storage info data
-            cachedOccupiedCells = new List<IntVec3>( AllSlotCells() );
-            cachedOccupiedCells.Add(Position);
+            cachedOccupiedCells = AllSlotCells().ToList(); // new List<IntVec3>(AllSlotCells());
+            //cachedOccupiedCells.Add(Position);
 
             // Create the new collection position (storage zone)
             //slotGroup = new SlotGroup(this);
@@ -426,7 +426,7 @@ namespace Teleportation
         /// <returns></returns>
         public IEnumerable<IntVec3> AllSlotCells()
         {
-            return GenAdj.CellsOccupiedBy(Position,Rotation, def.size);
+            return GenAdj.CellsOccupiedBy(Position, Rotation, def.size);
         }
 
         /// <summary>
@@ -517,7 +517,12 @@ namespace Teleportation
             {
                 // Create storage field
                 if (slotGroup == null)
+                {
+                    if (cachedOccupiedCells == null || cachedOccupiedCells.Count == 0)
+                        cachedOccupiedCells = AllSlotCells().ToList();
+
                     slotGroup = new SlotGroup(this);
+                }
             }
         }
 

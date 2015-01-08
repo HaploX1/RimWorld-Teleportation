@@ -21,7 +21,7 @@
 		<graphicPath>Things/Building/Teleportation/Teleporter</graphicPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<ShaderType>Transparent</ShaderType>
-		<altitudeLayer>Zone</altitudeLayer>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
 		<statBases>
@@ -45,7 +45,7 @@
 		<rotatable>false</rotatable>
 		<selectable>true</selectable>
 		<neverMultiSelect>true</neverMultiSelect>
-		<itemSurface>false</itemSurface>
+		<itemSurface>true</itemSurface>
 		<designationCategory>Misc</designationCategory>
 		<tickerType>Normal</tickerType>
 		<comps>
