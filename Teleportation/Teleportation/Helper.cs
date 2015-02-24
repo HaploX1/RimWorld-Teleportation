@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 using UnityEngine;
-using VerseBase;
 using Verse;
 using Verse.AI;
 //using Verse.Sound;
@@ -64,15 +63,30 @@ namespace ModCommon
         /// <returns></returns>
         public static IEnumerable<Pawn> FindAllAdjacentPawnsToPosition(IntVec3 pos)
         {
-            IEnumerable<IntVec3> positions = GenAdj.AdjacentCellsCardinal_InBounds(pos);
-            IEnumerable<Pawn> pawns = Find.ListerPawns.AllPawns;
 
-            foreach (IntVec3 position1 in positions)
+            List<Pawn> pawns = Find.ListerPawns.AllPawns;
+
+            for (int pc = 0; pc < pawns.Count; pc++)
             {
-                foreach (Pawn pawn1 in pawns)
+                Pawn pawn1 = pawns[pc];
+
+                if (pawn1.Position == pos)
                 {
-                    if (pawn1.Position == position1 || pawn1.Position == pos)
-                        yield return pawn1;
+                    yield return pawn1;
+                    continue;
+                }
+
+                for (int i = 0; i < 4; i++)
+                {
+                    IntVec3 intVec3 = pos + GenAdj.CardinalDirections[i];
+                    if (intVec3.InBounds())
+                    {
+                        if (pawn1.Position == intVec3)
+                        {
+                            yield return pawn1;
+                            continue;
+                        }
+                    }
                 }
             }
         }

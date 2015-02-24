@@ -3,11 +3,11 @@
 	<name>Teleportation</name>
 	<author>Haplo</author>
 	<url>https://ludeon.com/forums/index.php?topic=7570.0</url>
-	<targetVersion>Alpha 8</targetVersion>
+	<targetVersion>Alpha 9</targetVersion>
 	<description>Advances in nanotechnology allows the transportation of elements over a great distance. 
 Note: Because of the error margin it isn't possible to transport living matter without it dying. For savety reasons the source will be scanned and rejected if it is living matter.
 
 Special thanks to mrofa for the graphics.
-(Version: 1.8.0)
+(Version: 1.9.0)
 	</description>
 </ModMetaData>

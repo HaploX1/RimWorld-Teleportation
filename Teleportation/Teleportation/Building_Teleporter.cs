@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 using UnityEngine;
-using VerseBase;
 using Verse;
 using Verse.AI;
 //using Verse.Sound;
@@ -249,8 +248,8 @@ namespace Teleportation
                 return;
 
             // Check if there is an item on my slots, send if possible to target
-            List<IntVec3> allCells = AllSlotCellsListFast();
-            List<IntVec3> targetCells = target.AllSlotCellsListFast();
+            List<IntVec3> allCells = AllSlotCellsList();
+            List<IntVec3> targetCells = target.AllSlotCellsList();
 
             for (int i = 0; i < allCells.Count; i++)
             {
@@ -345,9 +344,9 @@ namespace Teleportation
         /// This creates new selection buttons with a new graphic
         /// </summary>
         /// <returns></returns>
-        public override IEnumerable<Command> GetCommands()
+        public override IEnumerable<Gizmo> GetGizmos()
         {
-            foreach (Command cbase in base.GetCommands())
+            foreach (Gizmo cbase in base.GetGizmos())
                 yield return cbase;
 
             if (!PowerOk)
@@ -415,9 +414,13 @@ namespace Teleportation
         /// Returns the occupied slot list
         /// </summary>
         /// <returns></returns>
-        public List<IntVec3> AllSlotCellsListFast()
+        public List<IntVec3> AllSlotCellsList()
         {
-            return cachedOccupiedCells;
+            if (this.cachedOccupiedCells == null)
+            {
+                this.cachedOccupiedCells = this.AllSlotCells().ToList<IntVec3>();
+            }
+            return this.cachedOccupiedCells;
         }
 
         /// <summary>

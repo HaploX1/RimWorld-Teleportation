@@ -2,52 +2,49 @@
 <ThingDefs>
 
 
-	<ThingDef Name="BuildingBase" Abstract="True">
-		<category>Building</category>
-		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-		<selectable>true</selectable>
-		<drawerType>MapMeshAndRealTime</drawerType>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-		<repairEffect>Repair</repairEffect>
-	</ThingDef>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>TeleportationStation</defName>
 		<eType>BuildingComplex</eType>
 		<label>Teleporter</label>
-		<description>This building transports matter to it's counterpart.\nNote: It transports non-living matter only.</description>
 		<thingClass>Teleportation.Building_Teleporter</thingClass>
-		<category>Building</category>
 		<graphicPath>Things/Building/Teleportation/Teleporter</graphicPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<ShaderType>Transparent</ShaderType>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<staticSunShadowHeight>0.3</staticSunShadowHeight>
 		<statBases>
 			<WorkToMake>2500</WorkToMake>
 			<MaxHealth>100</MaxHealth>
 			<Flammability>1.0</Flammability>
-			<Beauty>0</Beauty>
 		</statBases>
-		<castEdgeShadows>false</castEdgeShadows>
+		<description>This building transports matter to it's counterpart.\nNote: It transports non-living matter only.</description>
 		<size>(2,2)</size>
 		<costList>
 			<Steel>50</Steel>
 			<Gold>10</Gold>
 			<Plasteel>40</Plasteel>
 		</costList>
-		<killedLeavings>
-			<Steel>30</Steel>
-			<Plasteel>25</Plasteel>
-			<Gold>5</Gold>
-		</killedLeavings>
-		<rotatable>false</rotatable>
-		<selectable>true</selectable>
-		<neverMultiSelect>true</neverMultiSelect>
-		<itemSurface>true</itemSurface>
-		<designationCategory>Misc</designationCategory>
 		<tickerType>Normal</tickerType>
+		<rotatable>false</rotatable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<selectable>true</selectable>
+		<designationCategory>Misc</designationCategory>
+		<itemSurface>true</itemSurface>
 		<comps>
 			<li>
 				<compClass>CompPowerTrader</compClass>
@@ -89,6 +86,7 @@
 		<placeWorkers>
 			<li>Teleportation.PlaceWorker_Teleporter</li>
 		</placeWorkers>
+		<constructEffect>ConstructMetal</constructEffect>
 	</ThingDef>
 
 </ThingDefs>
