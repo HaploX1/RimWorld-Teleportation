@@ -18,7 +18,7 @@ namespace Teleportation
 
         private const string defNameOfTeleporter = "TeleportationStation";
 
-        public override AcceptanceReport AllowsPlacing(EntityDef def, IntVec3 center, IntRot rot)
+        public override AcceptanceReport AllowsPlacing(EntityDef def, IntVec3 center, Rot4 rot)
         {
             
             AcceptanceReport acceptanceReport;

@@ -16,12 +16,11 @@
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>TeleportationStation</defName>
-		<eType>BuildingComplex</eType>
 		<label>Teleporter</label>
 		<thingClass>Teleportation.Building_Teleporter</thingClass>
 		<graphicPath>Things/Building/Teleportation/Teleporter</graphicPath>
 		<graphicClass>Graphic_Single</graphicClass>
-		<ShaderType>Transparent</ShaderType>
+		<graphicShaderType>Transparent</graphicShaderType>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -29,7 +28,7 @@
 		<staticSunShadowHeight>0.3</staticSunShadowHeight>
 		<statBases>
 			<WorkToMake>2500</WorkToMake>
-			<MaxHealth>100</MaxHealth>
+			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<description>This building transports matter to it's counterpart.\nNote: It transports non-living matter only.</description>
