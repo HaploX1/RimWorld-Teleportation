@@ -15,7 +15,7 @@ using ModCommon;
 
 namespace Teleportation
 {
-    public class Building_Teleporter : Building, SlotGroupParent
+    public class Building_Teleporter : Building, ISlotGroupParent
     {
         #region Variables
 
@@ -258,10 +258,10 @@ namespace Teleportation
 
 
                 // Check if resource is here and check if no resource is at target position
-                if (Find.ThingGrid.CellContains(sourceCell, EntityCategory.Item))
+                if (Find.ThingGrid.CellContains(sourceCell, ThingCategory.Item))
                 {
                     // Check if target cell is empty
-                    if (Find.ThingGrid.CellContains(targetCell, EntityCategory.Item))
+                    if (Find.ThingGrid.CellContains(targetCell, ThingCategory.Item))
                         continue;
 
                     // Start sending countdown
@@ -278,7 +278,7 @@ namespace Teleportation
                         IEnumerable<Thing> sourceCellThings = Find.ThingGrid.ThingsAt(sourceCell);
                         foreach (Thing t in sourceCellThings)
                         {
-                            if (t.def.category == EntityCategory.Item)
+                            if (t.def.category == ThingCategory.Item)
                             {
                                 // Create identical item at target
                                 Thing targetThing = ThingMaker.MakeThing(t.def, t.Stuff);

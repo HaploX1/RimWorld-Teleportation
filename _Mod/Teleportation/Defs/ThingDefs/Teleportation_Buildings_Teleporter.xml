@@ -18,9 +18,12 @@
 		<defName>TeleportationStation</defName>
 		<label>Teleporter</label>
 		<thingClass>Teleportation.Building_Teleporter</thingClass>
-		<graphicPath>Things/Building/Teleportation/Teleporter</graphicPath>
-		<graphicClass>Graphic_Single</graphicClass>
-		<graphicShaderType>Transparent</graphicShaderType>
+		<graphicData>
+			<texPath>Things/Building/Teleportation/Teleporter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<pathCost>50</pathCost>
 		<passability>PassThroughOnly</passability>
@@ -43,7 +46,7 @@
 		<neverMultiSelect>true</neverMultiSelect>
 		<selectable>true</selectable>
 		<designationCategory>Misc</designationCategory>
-		<itemSurface>true</itemSurface>
+		<surfaceType>Item</surfaceType>
 		<comps>
 			<li>
 				<compClass>CompPowerTrader</compClass>
@@ -53,7 +56,7 @@
 		<building>
 			<fixedStorageSettings>
 				<priority>Normal</priority>
-				<allowances>
+				<filter>
 					<categories>
 						<li>FoodRaw</li>
 						<li>FoodMeals</li>
@@ -62,11 +65,11 @@
 						<li>BodyParts</li>
 						<li>Weapons</li>
 					</categories>
-				</allowances>
+				</filter>
 			</fixedStorageSettings>
 			<defaultStorageSettings>
 				<priority>Normal</priority>
-				<allowances>
+				<filter>
 					<categories>
 						<li>FoodRaw</li>
 						<li>FoodMeals</li>
@@ -75,7 +78,7 @@
 						<li>BodyParts</li>
 						<li>Weapons</li>
 					</categories>
-				</allowances>
+				</filter>
 			</defaultStorageSettings>
 		</building>
 		<inspectorTabs>
