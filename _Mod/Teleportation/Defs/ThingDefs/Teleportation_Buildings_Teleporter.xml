@@ -62,7 +62,7 @@
 						<li>FoodMeals</li>
 						<li>ResourcesRaw</li>
 						<li>Items</li>
-						<li>BodyParts</li>
+						<li>BodyPartsAndImplants</li>
 						<li>Weapons</li>
 					</categories>
 				</filter>
@@ -75,7 +75,7 @@
 						<li>FoodMeals</li>
 						<li>ResourcesRaw</li>
 						<li>Items</li>
-						<li>BodyParts</li>
+						<li>BodyPartsAndImplants</li>
 						<li>Weapons</li>
 					</categories>
 				</filter>

@@ -92,6 +92,14 @@ namespace Teleportation
             }
         }
 
+        public bool StorageTabVisible
+        {
+            get
+            {
+                return true;
+            }
+        }
+
         public void TrySetConnectedTeleporter(Building_Teleporter teleporter)
         {
             if (teleporter != null && teleporter != this)
@@ -333,7 +341,7 @@ namespace Teleportation
             if (State == TeleporterState.send)
             {
                 stringBuilder.AppendLine();
-                stringBuilder.Append(txtCountdownTeleporting.Translate() + " " + GenTime.TickstoSecondsString(countdownTeleporting));
+                stringBuilder.Append(txtCountdownTeleporting.Translate() + " " + GenDate.TickstoSecondsString(countdownTeleporting));
             }
 
             return stringBuilder.ToString();

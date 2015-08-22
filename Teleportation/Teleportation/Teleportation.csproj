@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>E:\Spiele\_Indie Games\RimWorld\WORK\_Projects\_Programming Mod-dll\_Alpha11\Assembly-CSharp.dll</HintPath>
+      <HintPath>E:\Spiele\_Indie Games\RimWorld\WORK\_Projects\_Programming Mod-dll\_Alpha12\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -42,7 +42,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
-      <HintPath>E:\Spiele\_Indie Games\RimWorld\WORK\_Projects\_Programming Mod-dll\_Alpha11\UnityEngine.dll</HintPath>
+      <HintPath>E:\Spiele\_Indie Games\RimWorld\WORK\_Projects\_Programming Mod-dll\_Alpha12\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
